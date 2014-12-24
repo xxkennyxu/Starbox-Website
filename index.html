@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-
-<head>
-    <title>My Page</title>
-	<script type="text/javascript" src=https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js></script>
-</head>
-
-<html>
+<html lang="en" ng-app="starboxApp">
+	<head>
+	    <title>Starbox</title>
+		<script src="lib/angular.js"></script>
+		<script src="lib/angular-route.js"></script>
+		<script async="" src="//www.google-analytics.com/analytics.js"></script>
+		<!-- Import Angular first - then everything else -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/controllers.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/css/style.css">
+	    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+	</head>
+	<header class="global-header">
+		<div class="header-filler">.</div>
+		<div class="header-announcement"> Announcements here </div>
+		<div class="header-social">
+			<!-- do we need this? just add anchor tags -->
+		</div>
+	</header>
 	<body>
 		
+		<div ng-view></div>
 	</body>
 </html>
