@@ -41,7 +41,10 @@
 	height:40px;
 	
 	border-bottom: 2px solid gray;
+	/* Overriding it as the pointer should only change on the image's hover */
+	cursor: default;
 }
+
 
 .floater-social img {
 	position: absolute;
@@ -56,5 +59,7 @@
 
 .floater-social img.grey:hover {
 	opacity: 0;
+	cursor: pointer;
 }
+
 
