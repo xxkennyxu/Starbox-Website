@@ -2,9 +2,11 @@
     margin:0;
     padding:0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-   	font-size: 18px;
+   	font-size: 25px;
+   	color: white;
 }
 
+/* TODO: Maybe remove this? Don't need announcement part (?) */
 .global-header {
 	height: 45px;
 
@@ -17,14 +19,70 @@
 
 }
 
-/* HEADER END */
-.main-navbar {
-	height: 20vh;
-
-	background-color:blue;
+body {
+	background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* Floater Div*/
+.main-container {
+	/*padding: 120px 120px 0px 120px;*/
+	position: absolute;
+	width: 1024px;
+	top: 92px;
+	left: calc(50% - 512px);
+
+	opacity: 0.8;
+}
+
+.main-title {
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.main-navbar {
+	width: 100%;
+	height: 100%;
+	
+	background-color: silver;
+}
+	.main-navbar ul {
+		/* Remove the bullet points */
+		list-style-type: none;
+		text-align: center;
+	}
+
+		.main-navbar ul li {
+			display: inline-block;
+			height: 60px;
+			
+			/* Dictates where the text lives in the nav box */
+			line-height: 60px;
+		}
+			.main-navbar ul li a{
+				display: block;
+				width: 120px;
+
+				font-weight: bold;
+				/* remove underline */
+				text-decoration: none;
+				text-align: center;
+    			text-transform: uppercase;
+
+    			transition: color 80ms ease-out;
+			}
+			.main-navbar ul li a:hover{
+				color: black;
+			}
+
+	.main-content {
+		height: 500px;
+		width: 500px;
+		background-color: red;
+	}
+
+/* Floater Div START*/
 .floater-social {
 	position: fixed;
 	bottom: 50px;
@@ -60,4 +118,4 @@
 .floater-social img.grey:hover {
 	opacity: 0;
 }
-
+/* Floater Div END*/
