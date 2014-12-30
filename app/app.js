@@ -6,8 +6,8 @@ var starboxApp = angular.module('starboxApp', [
 starboxApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/test', {
-        templateUrl: 'view/main.html',
+      when('/home', {
+        templateUrl: 'view/home.html',
         controller: 'MainPageCtrl'
       }).
       // when('/phones/:phoneId', {
@@ -15,6 +15,6 @@ starboxApp.config(['$routeProvider',
       //   controller: 'PhoneDetailCtrl'
       // }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   }]);
