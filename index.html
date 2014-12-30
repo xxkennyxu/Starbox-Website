@@ -2,19 +2,38 @@
 <html lang="en" ng-app="starboxApp">
 	<head>
 	    <title>Starbox</title>
+	    <!-- TODO: Get minified versions -->
 		<script src="lib/angular.js"></script>
 		<script src="lib/angular-route.js"></script>
+		<!-- TODO: Hook this up -->
 		<script async="" src="//www.google-analytics.com/analytics.js"></script>
 		<!-- Import Angular first - then everything else -->
 		<script type="text/javascript" src="app/app.js"></script>
 		<script type="text/javascript" src="app/controllers.js"></script>
 	    <link rel="stylesheet" type="text/css" href="/css/style.css">
 	    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+
+	    <script type="text/javascript"></script>
 	</head>
-	<header class="global-header">
-		Announcements here
+	<header>
 	</header>
-	<div class="floater-social">
+	
+	<body background="../assets/background.png">
+		<div class="main-container">
+			<div class="main-title"> Starbox - The Game (Fancy Title Image To Come) </div>
+			<div class="main-navbar"> 
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="http://starbox.azurewebsites.net/forums" target="_blank">Forums</a></li>
+					<li><a href="#">Dev Tracker</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">About Us</a></li>
+				</ul>
+			</div> 
+			
+			<div ng-view></div>	
+		</div>
+		<div class="floater-social">
 		<!-- http must be used otherwise the link will be relative 
 			 target _blank opens the link in a new tab
 		-->
@@ -30,9 +49,6 @@
 			<img class="social-picture" src="../assets/twitter24.png"/>
 			<img class="social-picture grey" src="../assets/twitter24grey.png"/>
 		</a>
-	</div>
-	<body>
-		<div class="main-navbar"> </div> 
-		<div ng-view></div>
+		</div>
 	</body>
 </html>
