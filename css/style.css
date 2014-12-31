@@ -1,28 +1,15 @@
-*{
+body{
     margin:0;
     padding:0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-   	font-size: 25px;
    	color: white;
-}
-
-/* TODO: Maybe remove this? Don't need announcement part (?) */
-.global-header {
-	height: 45px;
-
-	/* Used to vertically align content */
-	line-height: 45px;
-    vertical-align: middle;
-    text-align: center;
-	
-	background-color: green;
-
 }
 
 body {
 	background-image: url("../assets/background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .main-container {
@@ -44,12 +31,14 @@ body {
 .main-navbar {
 	width: 100%;
 	height: 100%;
-	
+
 	background-color: silver;
 	border-radius: 4px;
 	box-shadow: 2px 2px 2px gray;
 }
 	.main-navbar ul {
+		/* ul has default margins? */
+		margin: 0;
 		/* Remove the bullet points */
 		list-style-type: none;
 		text-align: center;
@@ -58,13 +47,16 @@ body {
 		.main-navbar ul li {
 			display: inline-block;
 			height: 60px;
-			
+
 			/* Dictates where the text lives in the nav box */
 			line-height: 60px;
 		}
 			.main-navbar ul li a{
 				display: block;
 				width: 120px;
+
+				font-size: 25px;
+				color: white;
 
 				font-weight: bold;
 				/* remove underline */
@@ -79,10 +71,46 @@ body {
 			}
 
 	.main-content {
-		height: 500px;
-		width: 500px;
-		background-color: red;
+		display: flex;
+		outline: 2px solid blue;
+
 	}
+		.post-list {
+			flex-direction: column;
+			width: 70%;
+			/* Divs by default are willing to grow their width, by specifying this, you cap the width */
+			width: 100%;
+		}
+			.post-content {
+				/* This is still needed because divs stack by default --> column now */
+				display: flex;
+				border: 2px solid white;
+				border-radius: 4px;
+				margin-bottom: 12px;
+			}
+				.post-avatar {
+					width: 10%;
+					height: 10px;
+					outline: 2px solid green;
+				}
+				.post-container {
+					width: 90%;
+	
+				}	
+					.post-title {
+						margin: 0;
+					}
+					.post-date {
+						margin: 0;
+					}
+					.post-body {
+						margin: 0;
+					}
+		.sidebar {
+			width: 30%;
+			height: 10px;
+			outline: 2px solid red;
+		}
 
 /* Floater Div START*/
 .floater-social {
