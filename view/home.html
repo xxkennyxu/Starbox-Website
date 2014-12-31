@@ -2,6 +2,7 @@
 	<div class="post-list">
 		<div class="post-content" ng-repeat="d in data">
 			<div class="post-avatar">
+				<img src="{{d.image}}"/>
 				{{d.author}}
 			</div>
 			<div class="post-container">
@@ -10,8 +11,8 @@
 				</h1>
 				<h5 class="post-date">
 					{{d.date}}
-				</h5 class="post-body">
-				<p>
+				</h5>
+				<p class="post-body">
 					{{d.body}}
 				</p>
 			</div>

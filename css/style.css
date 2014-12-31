@@ -13,7 +13,6 @@ body {
 }
 
 .main-container {
-	/*padding: 120px 120px 0px 120px;*/
 	position: absolute;
 	width: 1024px;
 	top: 92px;
@@ -32,9 +31,8 @@ body {
 	width: 100%;
 	height: 100%;
 
-	background-color: silver;
+	background-color: gray;
 	border-radius: 4px;
-	box-shadow: 2px 2px 2px gray;
 }
 	.main-navbar ul {
 		/* ul has default margins? */
@@ -72,39 +70,50 @@ body {
 
 	.main-content {
 		display: flex;
-		outline: 2px solid blue;
-
+		background-color: gray;
 	}
 		.post-list {
-			flex-direction: column;
 			width: 70%;
 			/* Divs by default are willing to grow their width, by specifying this, you cap the width */
 			width: 100%;
+
+			flex-direction: column;
 		}
 			.post-content {
 				/* This is still needed because divs stack by default --> column now */
 				display: flex;
 				border: 2px solid white;
 				border-radius: 4px;
-				margin-bottom: 12px;
+				margin-bottom: 24px;
 			}
 				.post-avatar {
 					width: 10%;
 					height: 10px;
-					outline: 2px solid green;
+
+					margin-top: 10px;
+					font-size: 1.2em;
+
+					text-align:center;
 				}
 				.post-container {
 					width: 90%;
-	
+					
 				}	
 					.post-title {
 						margin: 0;
+						margin-top: 4px;
+						font-size: 2em;
 					}
 					.post-date {
 						margin: 0;
+						margin-top: 1px;
+						font-size: 1em;
 					}
 					.post-body {
 						margin: 0;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-size: 1.2em;
 					}
 		.sidebar {
 			width: 30%;
