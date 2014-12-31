@@ -37,6 +37,7 @@ body {
 	.main-navbar ul {
 		/* ul has default margins? */
 		margin: 0;
+		padding: 0;
 		/* Remove the bullet points */
 		list-style-type: none;
 		text-align: center;
@@ -70,12 +71,14 @@ body {
 
 	.main-content {
 		display: flex;
+		margin-top: 15px;
 		background-color: gray;
 	}
 		.post-list {
-			width: 70%;
 			/* Divs by default are willing to grow their width, by specifying this, you cap the width */
 			width: 100%;
+
+			margin: 24px;
 
 			flex-direction: column;
 		}
@@ -84,7 +87,7 @@ body {
 				display: flex;
 				border: 2px solid white;
 				border-radius: 4px;
-				margin-bottom: 24px;
+				margin-bottom: 12px;
 			}
 				.post-avatar {
 					width: 10%;
@@ -106,8 +109,9 @@ body {
 					}
 					.post-date {
 						margin: 0;
-						margin-top: 1px;
 						font-size: 1em;
+						width: 95%;
+						border-bottom: 2px solid white;
 					}
 					.post-body {
 						margin: 0;
@@ -132,8 +136,8 @@ body {
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 
-	box-shadow: 2px 2px 2px #888888;
-	background-color: silver;
+	box-shadow: 2px 2px 2px silver;
+	background-color: gray;
 }
 
 .social {
@@ -141,7 +145,7 @@ body {
 	position: relative;
 	height:40px;
 	
-	border-bottom: 2px solid gray;
+	border-bottom: 2px solid silver;
 	/* Overriding it as the pointer should only change on the image's hover */
 	cursor: default;
 }
