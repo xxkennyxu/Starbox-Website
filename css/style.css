@@ -71,76 +71,80 @@ body {
 				color: black;
 			}
 
-	.main-content {
-		display: flex;
-		margin-top: 24px;
-		margin-bottom: 24px;
-		background-color: gray;
-		border-radius: 4px;
-		border: 2px solid white;
+.main-image-carousel {
+    
+}
 
-	}
-		.post-list {
-			/* Divs by default are willing to grow their width, by specifying this, you cap the width */
-			width: 100%;
+.main-content {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: gray;
+    border-radius: 4px;
+    border: 2px solid white;
 
-			margin-top: 24px;
-			margin-left: 24px;
-			margin-bottom: 12px;
+}
+    .post-list {
+        /* Divs by default are willing to grow their width, by specifying this, you cap the width */
+        width: 100%;
 
-			flex-direction: column;
-		}
-			.post-content {
-				/* This is still needed because divs stack by default --> column now */
-				display: flex;
-				border: 2px solid white;
-				border-radius: 4px;
-				margin-bottom: 12px;
-			}
-				.post-avatar {
-					width: 10%;
-					height: 10px;
+        margin-top: 24px;
+        margin-left: 24px;
+        margin-bottom: 12px;
 
-					margin-top: 10px;
-					font-size: 1.2em;
+        flex-direction: column;
+    }
+        .post-content {
+            /* This is still needed because divs stack by default --> column now */
+            display: flex;
+            border: 2px solid white;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+            .post-avatar {
+                width: 10%;
+                height: 10px;
 
-					text-align:center;
-				}
-				.post-container {
-					width: 90%;
-					
-				}	
-					.post-title {
-						margin: 0;
-						margin-top: 4px;
-						font-size: 2em;
-					}
-					.post-date {
-						margin: 0;
-						font-size: 1em;
-						width: 95%;
-						border-bottom: 2px solid white;
-					}
-					.post-body {
-						margin: 0;
-						margin-top: 5px;
-						margin-bottom: 10px;
-						font-size: 1.2em;
-					}
-		.sidebar-content {
-			width: 30%;
+                margin-top: 10px;
+                font-size: 1.2em;
 
-			margin: 24px;
-			
-			border: 2px solid white;
-			border-radius: 4px;
-		}
-			.sidebar-items {
-				margin: 24px;
-				margin-bottom: 48px;
-				text-align: center;
-				font-size: 25px;
-			}
+                text-align:center;
+            }
+            .post-container {
+                width: 90%;
+
+            }	
+                .post-title {
+                    margin: 0;
+                    margin-top: 4px;
+                    font-size: 2em;
+                }
+                .post-date {
+                    margin: 0;
+                    font-size: 1em;
+                    width: 95%;
+                    border-bottom: 2px solid white;
+                }
+                .post-body {
+                    margin: 0;
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                    font-size: 1.2em;
+                }
+    .sidebar-content {
+        width: 30%;
+
+        margin: 24px;
+
+        border: 2px solid white;
+        border-radius: 4px;
+    }
+        .sidebar-items {
+            margin: 24px;
+            margin-bottom: 48px;
+            text-align: center;
+            font-size: 25px;
+        }
 
 /* Floater Div START*/
 .floater-social {
