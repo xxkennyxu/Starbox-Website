@@ -26,6 +26,13 @@
                 });
             }
             $scope.data = data;
+            
+            // Slickify here
+            $scope.$on('$viewContentLoaded', function (){
+                console.log("Hello");
+                $('.main-image-carousel').slick({
+                });
+            });
         }]);
 
     starBoxController.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
@@ -33,4 +40,5 @@
             $scope.phoneId = $routeParams.phoneId;
         }]);
     
+
 })();
