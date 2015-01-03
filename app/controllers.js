@@ -8,7 +8,11 @@
         .directive("imageCarouselDirective", function() {
             return function(scope, element, attributes) {
                 if(scope.$last) {
-                    scope.$emit('lastimageloaded');   
+                    // Small delay before sending out the event
+                    // to accommodate for the last iteration
+                    setTimeout(function () {
+                        scope.$emit('lastimageloaded');      
+                    }, 0);
                 }
             };
         })
@@ -57,18 +61,22 @@
             }
             $scope.data = data;
             
-            var images = [], i = 0, l = 4;
+            var images = [], imagesx = [], i = 0, l = 4;
             var headers = ["Atlantica Released!!!", "PATCH - Chase Them To The Skies!", "The Apocalypse!", "Spaceships Are Attacking Us!"];
             for(i; i < l; i++) {
                 images.push({
                     image: "../picture%20assets/image" + (i+1) + ".png",
                     header: headers[i],
                     description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas" 
-                });   
+                });
+                imagesx.push({
+                    image: "../picture%20assets/image" + (i+1) + "x.png",
+                    header: headers[i],
+                });
             }
             
             $scope.images = images;
-            
+            $scope.imagesx = imagesx;
         }]);
 
     starBoxController.controller('PhoneDetailCtrl', ['$scope', '$routeParams',

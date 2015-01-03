@@ -18,7 +18,7 @@ body {
 	top: 92px;
 	left: calc(50% - 512px);
 
-	opacity: 0.8;
+	opacity: 0.98;
 }
 
 .main-title {
@@ -31,9 +31,9 @@ body {
 	width: 100%;
 	height: 100%;
 
-	background-color: gray;
+	background-color: #292F29;
 	border-radius: 4px;
-	border: 2px solid white;
+	border: 1px solid black;
     margin-bottom: 24px;
 }
 	.main-navbar ul {
@@ -71,11 +71,13 @@ body {
 				color: black;
 			}
 
-.main-image-show {
+div.main-image-show {
     width: 100%;
     height: 256px;
+    
+    margin-bottom: 12px;
     border-radius: 4px;
-    border: 2px solid white;
+    border: 1px solid black;
 
 }
     .image-show-item {
@@ -86,32 +88,36 @@ body {
         }
         .image-show-title {
             position: absolute;
-            width: 100%;
+            width: calc(100% - 8px);
             height: 64px;
-            padding-left: 8px;
-            background-color: rgba(0,0,0,0.6);
             bottom: 0px;
+            padding-left: 8px;
+    
+            background-color: rgba(0,0,0,0.6);
         }
             .image-show-title h4 {
-                font-size: 2.0em;
                 margin: 0;   
+                font-size: 2.0em;
             }
             .image-show-title p {
-                font-size: 1.2em;
                 margin: 0;
+                font-size: 1.2em;
             }
 
 .main-image-nav {
     width: 100%;
     height: 100px;
-    text-align: center;
     margin-left: 2px;
+
+    text-align: center;
     border-radius: 4px;
-    border: 2px solid white;
+    border: 1px solid black;
 
 }
     .image-nav-item {
         position:relative;
+        border-radius: 4px;
+        border: 1px solid black;
     }
         .image-nav-item img {
             /* No-op */
@@ -119,24 +125,23 @@ body {
         .image-nav-title {
             position: absolute;
             width: 100%;
-            height: 252px;
-            padding-left: 8px;
-            background-color: rgba(0,0,0,0.6);
+            height: 100%;
             top: 0px;
+    
+            background-color: rgba(0,0,0,0.2);
         }
             .image-nav-title h4 {
                 margin: 0;
                 font-size: 2.2em;
-                padding-top: 40%;
             }
 
 .main-content {
     display: flex;
     margin-top: 24px;
     margin-bottom: 24px;
-    background-color: gray;
+    background-color: #292F29;
     border-radius: 4px;
-    border: 2px solid white;
+    border: 1px solid black;
 
 }
     .post-list {
@@ -152,7 +157,7 @@ body {
         .post-content {
             /* This is still needed because divs stack by default --> column now */
             display: flex;
-            border: 2px solid white;
+            border: 1px solid white;
             border-radius: 4px;
             margin-bottom: 12px;
         }
@@ -183,7 +188,7 @@ body {
                 .post-body {
                     margin: 0;
                     margin-top: 5px;
-                    margin-bottom: 10px;
+                    margin-bottom: 12px;
                     font-size: 1.2em;
                 }
     .sidebar-content {
@@ -191,7 +196,7 @@ body {
 
         margin: 24px;
 
-        border: 2px solid white;
+/*        border: 2px solid white;*/
         border-radius: 4px;
     }
         .sidebar-items {
@@ -212,8 +217,8 @@ body {
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 
-	box-shadow: 2px 2px 2px silver;
-	background-color: gray;
+	box-shadow: 2px 2px 2px #292F29;
+	background-color: silver;
 }
 
 .social {
@@ -221,7 +226,7 @@ body {
 	position: relative;
 	height:40px;
 	
-	border-bottom: 2px solid silver;
+	border-bottom: 2px solid #292F29;
 	/* Overriding it as the pointer should only change on the image's hover */
 	cursor: default;
 }
