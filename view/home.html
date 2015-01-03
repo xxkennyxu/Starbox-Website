@@ -1,8 +1,26 @@
-<div class="main-image-carousel">
-    <div>LOL</div>
-    <div>LOL</div>
-    <div>LOL</div>
+<div class="main-image-show">
+    <div class="image-show-item" ng-repeat="i in images">
+        <img ng-src="{{i.image}}"/>
+        <div class="image-show-title">
+            <h4>
+                {{i.header}}
+            </h6>
+            <p>
+                {{i.description}}
+            </p>
+        </div>
+    </div>
+</div>
 
+<div class="main-image-nav" slickify-directive>
+    <div class="image-nav-item" ng-repeat="i in images" image-carousel-directive>
+<!--        <img ng-src="{{i.image}}"/>-->
+        <div class="image-nav-title">
+            <h4>
+                {{i.header}}
+            </h6>
+        </div>
+    </div>
 </div>
 
 <div class="main-content">
