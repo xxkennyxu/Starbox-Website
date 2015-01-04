@@ -46,21 +46,6 @@
 
     starBoxController.controller('MainPageCtrl', ['$scope', '$http',
         function ($scope, $http) {
-            var data = [], i = 0, l = 20;
-                var images = ["../picture%20assets/janna50.png", "../picture%20assets/chogath50.png", "../picture%20assets/gilbert50.png"];
-                var authors = ["Janna", "Cho'Gath", "Gilbert"];
-                var titles = ["Blizzard Rained Upon Us", "I Swallow Your Death", "NOMNOMNOM"];
-            for (i; i < l; i++) {
-                data.push({
-                    image: images[i % 3],
-                    author: authors[i % 3],
-                    title: titles[i % 3],
-                    date: randomDate(new Date(2012, 0, 1), new Date()).toUTCString(),
-                    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo ultricies commodo. Aliquam ut ipsum ante. Suspendisse commodo tempor lacus, id fringilla metus ultricies non. Donec sodales augue magna, eget viverra libero aliquet id. Mauris ut elementum mauris, nec luctus nibh. Mauris finibus rhoncus urna, vel ullamcorper neque tincidunt eget. Pellentesque et elit ex. Nunc at elementum enim. Pellentesque mattis euismod felis et elementum. Ut vestibulum egestas mi, a consectetur tellus mattis a. Aenean ante lorem, finibus sit amet molestie eget, varius ac odio. Maecenas nunc lorem, suscipit sed pretium vitae, ornare a leo. Nunc hendrerit ultricies libero in eleifend. "
-                });
-            }
-            $scope.data = data;
-            
             var images = [], imagesx = [], i = 0, l = 4;
             var headers = ["Atlantica Released!!!", "PATCH - Chase Them To The Skies!", "The Apocalypse!", "Spaceships Are Attacking Us!"];
             for(i; i < l; i++) {
@@ -77,12 +62,10 @@
             
             $scope.images = images;
             $scope.imagesx = imagesx;
+                                    
+            // Dynamically populate entries
+            $http.get('../data/january/entries.json').success(function(data) {
+                $scope.entries = data.entries;
+            });
         }]);
-
-    starBoxController.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
-        function ($scope, $routeParams) {
-            $scope.phoneId = $routeParams.phoneId;
-        }]);
-    
-
 })();
