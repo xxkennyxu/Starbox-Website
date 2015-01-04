@@ -6,7 +6,7 @@ body{
 }
 
 body {
-	background-image: url("../assets/background.png");
+	background-image: url("../assets/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -47,10 +47,10 @@ body {
 
 		.main-navbar ul li {
 			display: inline-block;
-			height: 60px;
+			height: 45px;
 
 			/* Dictates where the text lives in the nav box */
-			line-height: 60px;
+			line-height: 45px;
 		}
 			.main-navbar ul li a{
 				display: block;
@@ -83,8 +83,10 @@ div.main-image-show {
 }
     .image-show-item {
         position: relative;
+        width: 100%;
     }
         .image-show-item img {
+            border-radius: 4px;
             /* No-op */
         }
         .image-show-title {
