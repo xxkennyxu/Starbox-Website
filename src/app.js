@@ -9,7 +9,7 @@
       function($routeProvider) {
         $routeProvider.
           when('/home', {
-            templateUrl: 'view/home.html',
+            templateUrl: 'src/view/home.html',
             controller: 'MainPageCtrl'
           }).
           // when('/phones/:phoneId', {

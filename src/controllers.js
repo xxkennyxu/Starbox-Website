@@ -50,12 +50,12 @@
             var headers = ["Atlantica Released!!!", "PATCH - Chase Them To The Skies!", "The Apocalypse!", "Spaceships Are Attacking Us!"];
             for(i; i < l; i++) {
                 images.push({
-                    image: "../picture-assets/image" + (i+1) + ".jpg",
+                    image: "../assets/images/image" + (i+1) + ".jpg",
                     header: headers[i],
                     description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas" 
                 });
                 imagesx.push({
-                    image: "../picture-assets/image" + (i+1) + "x.jpg",
+                    image: "../assets/images/image" + (i+1) + "x.jpg",
                     header: headers[i],
                 });
             }
