@@ -25,7 +25,6 @@ body {
 .main-title {
 	font-size: 3em;
 	font-weight: bold;
-	text-align: center;
 }
 
 .main-navbar {
@@ -214,10 +213,14 @@ div.main-image-show {
 
 /* FAQ START */
 .faq-page-title {
-    text-align: center;
-    font-size: 2.0em;
+/*    text-align: center;*/
     margin-top: 15px;
     margin-bottom: 20px;
+    margin-left: 30px;
+    
+    font-size: 2.0em;
+    font-weight: bold;
+    text-decoration: underline;
 }
 .faq-list {
     width: 100%;  
@@ -238,6 +241,7 @@ div.main-image-show {
             text-decoration: underline;
         }
         .faq-answer {
+            /* Used to show/hide questions on click */
             display: none;
             
             margin-top: 10px;
