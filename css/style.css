@@ -234,13 +234,20 @@ div.main-image-show {
         .faq-question {
             font-size: 1.5em;
         }
+        .faq-question:hover {
+            text-decoration: underline;
+        }
         .faq-answer {
             display: none;
             
             margin-top: 10px;
             margin-left: 40px;
+            margin-right: calc(40px + 30px);
+            padding-left: 10px;
             
-            font-size: 1.2em;
+            border: 1px solid white;
+            border-radius: 4px;
+            font-size: 1.3em;
         }
 
 /* Floater Div START*/

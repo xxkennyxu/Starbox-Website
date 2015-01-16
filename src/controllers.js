@@ -72,12 +72,21 @@
     starBoxController.controller('FAQPageCtrl', ['$scope', '$http',
         function ($scope, $http) {
             $scope.showAnswer = function (event) {
-                var style = event.srcElement.parentElement.children[1].style.display;
-                if(style === "") {
-                    event.srcElement.parentElement.children[1].style.display = "block";
+                var displayStyle = event.srcElement.parentElement.children[1].style.display;
+                if(displayStyle === "") {
+                    displayStyle = "block";
                 } else {
-                    event.srcElement.parentElement.children[1].style.display = "";   
+                    displayStyle = "";   
                 }
+                event.srcElement.parentElement.children[1].style.display = displayStyle;
+                
+                var fontStyle = event.srcElement.style.fontWeight;
+                if(fontStyle === "") {
+                    fontStyle = "bold";
+                } else {
+                    fontStyle = "";   
+                }
+                event.srcElement.style.fontWeight = fontStyle;
             };
         }]);
 })();
