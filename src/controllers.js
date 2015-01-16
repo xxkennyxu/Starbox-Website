@@ -68,4 +68,16 @@
                 $scope.entries = data.entries;
             });
         }]);
+    
+    starBoxController.controller('FAQPageCtrl', ['$scope', '$http',
+        function ($scope, $http) {
+            $scope.showAnswer = function (event) {
+                var style = event.srcElement.parentElement.children[1].style.display;
+                if(style === "") {
+                    event.srcElement.parentElement.children[1].style.display = "block";
+                } else {
+                    event.srcElement.parentElement.children[1].style.display = "";   
+                }
+            };
+        }]);
 })();
