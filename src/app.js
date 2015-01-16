@@ -12,10 +12,10 @@
             templateUrl: 'src/view/home.html',
             controller: 'MainPageCtrl'
           }).
-          // when('/phones/:phoneId', {
-          //   templateUrl: 'partials/phone-detail.html',
-          //   controller: 'PhoneDetailCtrl'
-          // }).
+          when('/faq', {
+            templateUrl: 'src/view/faq.html',
+            controller: 'FAQPageCtrl'
+          }).
           otherwise({
             redirectTo: '/home'
           });

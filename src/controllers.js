@@ -56,7 +56,7 @@
                 });
                 imagesx.push({
                     image: "../assets/images/image" + (i+1) + "x.jpg",
-                    header: headers[i],
+                    header: headers[i]
                 });
             }
             
