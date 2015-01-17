@@ -257,8 +257,8 @@ div.main-image-show {
 /* ABOUTUS START */
 .about-title {
     margin-top: 15px;
-    margin-bottom: 25px;
-    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-left: 30px;
     
     font-size: 2.0em;
     font-weight: bold;
@@ -274,20 +274,28 @@ div.main-image-show {
 }
     .about-user {
         display: flex;
-        position:relative;
         margin-top: 25px;
         margin-left: 25px;
+        margin-bottom: 25px;
     }
         .about-avatar {
+            position: relative;
+            width: 15%;
+
+            margin-top: 15px;
         }
             .about-backpicture {
+                text-align: center;
                 margin-bottom: 15px;
             }
             .about-picture {
                 position: absolute;
                 transform: rotate(-24deg);
                 top:0;
+                /* TODO */
+                left: 10px;
                 
+                text-align: center;
                 transition: all 200ms ease;
             }
             .about-picture:hover {
@@ -299,8 +307,28 @@ div.main-image-show {
                 margin-top: 15px;
                 margin-bottom: 15px;
             }
+        .about-avatar-border-right {
+            /* TODO */
+            height: 150px;
+            top: 50%; /* picture size */
+            margin: 25px;
+            border-right: 1px solid white;   
+        }
         .about-bio {
-            margin-bottom: 25px;
+            width: 85%;
+            margin-top: 5px;
+            margin-right: 15px;
+            margin-bottom: 12px;
+            
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            
+            font-size: 1.2em;
+            
+            border: 1px solid white;
+            border-radius: 4px;
         }
 
 /* Floater Div START*/
