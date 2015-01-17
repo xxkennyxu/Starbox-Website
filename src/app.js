@@ -16,6 +16,10 @@
             templateUrl: 'src/view/faq.html',
             controller: 'FAQPageCtrl'
           }).
+          when('/aboutus', {
+            templateUrl: 'src/view/aboutus.html',
+            controller: 'AboutUsPageCtrl'
+          }).
           otherwise({
             redirectTo: '/home'
           });

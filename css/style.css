@@ -176,7 +176,7 @@ div.main-image-show {
             }
             .post-container {
                 width: 90%;
-
+ 
             }	
                 .post-title {
                     margin: 0;
@@ -229,7 +229,7 @@ div.main-image-show {
     border-radius: 4px;
     border: 1px solid black;
 }
-    .faq-content {
+    .faq-container {
         margin-left: 30px;
         margin-bottom: 15px;
         
@@ -252,6 +252,55 @@ div.main-image-show {
             border: 1px solid white;
             border-radius: 4px;
             font-size: 1.3em;
+        }
+
+/* ABOUTUS START */
+.about-title {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    
+    font-size: 2.0em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.about-list {
+    width: 100%;  
+    
+    background-color: #292F29;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+    .about-user {
+        display: flex;
+        position:relative;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+        .about-avatar {
+        }
+            .about-backpicture {
+                margin-bottom: 15px;
+            }
+            .about-picture {
+                position: absolute;
+                transform: rotate(-24deg);
+                top:0;
+                
+                transition: all 200ms ease;
+            }
+            .about-picture:hover {
+                transform: rotate(0deg);   
+            }
+            .about-name {
+                font-size: 2em;
+                text-align: center;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        .about-bio {
+            margin-bottom: 25px;
         }
 
 /* Floater Div START*/
