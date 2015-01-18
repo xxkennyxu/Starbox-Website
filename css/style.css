@@ -235,23 +235,42 @@ div.main-image-show {
         
     }
         .faq-question {
+            /* Sizes div to content */
+            display: inline-block;
             font-size: 1.5em;
+            -webkit-user-select: none;
         }
         .faq-question:hover {
+            cursor: pointer;
             text-decoration: underline;
         }
         .faq-answer {
             /* Used to show/hide questions on click */
-            display: none;
-            
+            max-height: 0px;
+            overflow: hidden;
+                    
             margin-top: 10px;
             margin-left: 40px;
             margin-right: calc(40px + 30px);
             padding-left: 10px;
             
-            border: 1px solid white;
+            border: 0px solid white;
             border-radius: 4px;
             font-size: 1.3em;
+            opacity: 0.25;
+            
+            transition: all 50ms ease-out;
+        }
+        /* adding .expanded to the faq-container, so the faq-answer will only then be styled */
+        .faq-container.expanded .faq-question {
+            font-weight: bold;   
+        }
+        .faq-container.expanded .faq-answer {
+            max-height: 500px;
+            transition: all 250ms ease-out;
+            border-width: 1px;
+            
+            opacity: 1;
         }
 
 /* ABOUTUS START */
@@ -286,18 +305,24 @@ div.main-image-show {
         }
             .about-backpicture {
                 text-align: center;
-                margin-bottom: 15px;
+                margin-top: 25px;
+                margin-bottom: 15px;                
             }
+                .about-backpicture img {
+                    border: 2px solid black;
+                }
+            /* rotated picture */
             .about-picture {
                 position: absolute;
-                transform: rotate(-24deg);
-                top:0;
-                /* TODO */
-                left: 10px;
+                top: 25px;
+                left: 18px;
                 
-                text-align: center;
+                transform: rotate(-24deg);
                 transition: all 200ms ease;
             }
+                .about-picture img {
+                    border: 2px solid black;
+                }
             .about-picture:hover {
                 transform: rotate(0deg);   
             }
@@ -308,9 +333,9 @@ div.main-image-show {
                 margin-bottom: 15px;
             }
         .about-avatar-border-right {
-            /* TODO */
-            height: 150px;
+            height: calc(1.5*96px);
             top: 50%; /* picture size */
+            
             margin: 25px;
             border-right: 1px solid white;   
         }
@@ -373,3 +398,15 @@ div.main-image-show {
 }
 
 /* Floater Div END*/
+
+
+
+/* MISC Classes */
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

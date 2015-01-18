@@ -72,21 +72,27 @@
     starBoxController.controller('FAQPageCtrl', ['$scope', '$http',
         function ($scope, $http) {
             $scope.showAnswer = function (event) {
-                var displayStyle = event.srcElement.parentElement.children[1].style.display;
-                if(displayStyle === "") {
-                    displayStyle = "block";
+//                var displayStyle = event.srcElement.parentElement.children[1].style.display;
+                var isExpanded = event.srcElement.parentElement.classList.contains("expanded");
+                if(isExpanded) {
+                    event.srcElement.parentElement.classList.remove('expanded');
                 } else {
-                    displayStyle = "";   
+                    event.srcElement.parentElement.classList.add('expanded');   
                 }
-                event.srcElement.parentElement.children[1].style.display = displayStyle;
-                
-                var fontStyle = event.srcElement.style.fontWeight;
-                if(fontStyle === "") {
-                    fontStyle = "bold";
-                } else {
-                    fontStyle = "";   
-                }
-                event.srcElement.style.fontWeight = fontStyle;
+//                if(displayStyle === "") {
+//                    displayStyle = "block";
+//                } else {
+//                    displayStyle = "";   
+//                }
+//                event.srcElement.parentElement.children[1].style.display = displayStyle;
+//                
+//                var fontStyle = event.srcElement.style.fontWeight;
+//                if(fontStyle === "") {
+//                    fontStyle = "bold";
+//                } else {
+//                    fontStyle = "";   
+//                }
+//                event.srcElement.style.fontWeight = fontStyle;
             };
         }]);
 })();
