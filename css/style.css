@@ -310,6 +310,7 @@ div.main-image-show {
             }
                 .about-backpicture img {
                     border: 2px solid black;
+                    box-shadow: 5px 5px 1px black;
                 }
             /* rotated picture */
             .about-picture {
@@ -323,9 +324,9 @@ div.main-image-show {
                 .about-picture img {
                     border: 2px solid black;
                 }
-            .about-picture:hover {
-                transform: rotate(0deg);   
-            }
+                .about-picture:hover {
+                    transform: rotate(0deg);   
+                }
             .about-name {
                 font-size: 2em;
                 text-align: center;
@@ -354,6 +355,16 @@ div.main-image-show {
             
             border: 1px solid white;
             border-radius: 4px;
+            
+            transition: all 0ms;
+
+        }
+        .about-user.mouseOver .about-bio {
+            text-align: center;
+            font-size: 4em;
+            font-weight: bold;
+
+            transition: all 300ms ease-in;
         }
 
 /* Floater Div START*/

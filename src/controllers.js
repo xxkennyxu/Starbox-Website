@@ -72,27 +72,31 @@
     starBoxController.controller('FAQPageCtrl', ['$scope', '$http',
         function ($scope, $http) {
             $scope.showAnswer = function (event) {
-//                var displayStyle = event.srcElement.parentElement.children[1].style.display;
                 var isExpanded = event.srcElement.parentElement.classList.contains("expanded");
                 if(isExpanded) {
                     event.srcElement.parentElement.classList.remove('expanded');
                 } else {
                     event.srcElement.parentElement.classList.add('expanded');   
                 }
-//                if(displayStyle === "") {
-//                    displayStyle = "block";
-//                } else {
-//                    displayStyle = "";   
-//                }
-//                event.srcElement.parentElement.children[1].style.display = displayStyle;
-//                
-//                var fontStyle = event.srcElement.style.fontWeight;
-//                if(fontStyle === "") {
-//                    fontStyle = "bold";
-//                } else {
-//                    fontStyle = "";   
-//                }
-//                event.srcElement.style.fontWeight = fontStyle;
             };
         }]);
+    
+    starBoxController.controller('AboutUsPageCtrl', ['$scope', '$http',
+    function ($scope, $http) {
+        $scope.mouseOver = function (event) {
+            var parent = event.srcElement.parentElement.parentElement.parentElement;
+            var bio = parent.children[2];
+            parent.classList.add('mouseOver');
+            bio.temp = bio.innerHTML;
+            bio.innerHTML = "\"Amazing Quote Here\"";            
+            console.log(parent);
+        };
+        $scope.mouseLeave = function (event) {
+            var parent = event.srcElement.parentElement.parentElement.parentElement;
+            var bio = parent.children[2];
+            parent.classList.remove('mouseOver');
+            bio.innerHTML = bio.temp;
+            console.log(bio.innerHTML);
+        };
+    }]);
 })();
