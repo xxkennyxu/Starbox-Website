@@ -69,6 +69,11 @@
             });
         }]);
     
+    starBoxController.controller('FeaturesPageCtrl', ['$scope', '$http',
+        function ($scope, $http) {
+
+        }]);
+    
     starBoxController.controller('FAQPageCtrl', ['$scope', '$http',
         function ($scope, $http) {
             $scope.showAnswer = function (event) {

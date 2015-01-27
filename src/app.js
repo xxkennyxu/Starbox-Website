@@ -12,6 +12,10 @@
             templateUrl: 'src/view/home.html',
             controller: 'MainPageCtrl'
           }).
+          when('/features', {
+            templateUrl: 'src/view/features.html',
+            controller: 'FeaturesPageCtrl'
+          }).
           when('/faq', {
             templateUrl: 'src/view/faq.html',
             controller: 'FAQPageCtrl'
